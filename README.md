@@ -1,0 +1,1 @@
+# mahjong_score_miniapp_project
