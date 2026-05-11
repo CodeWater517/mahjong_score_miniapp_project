@@ -1,0 +1,21 @@
+# Java / Maven
+target/
+*.class
+
+# Node / uni-app
+node_modules/
+dist/
+unpackage/
+
+# IDE / OS
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
+
+# Local env
+.env
+.env.*
+!.env.example
+project.private.config.json
+.tools/

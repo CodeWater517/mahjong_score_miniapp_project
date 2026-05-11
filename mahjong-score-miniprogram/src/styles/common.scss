@@ -1,0 +1,80 @@
+@import './variables.scss';
+
+/* 页面通用外壳：所有页面都用 page 类提供安全的内边距和最小高度。 */
+.page {
+  min-height: 100vh;
+  padding: 24rpx;
+  box-sizing: border-box;
+}
+
+/* 页面主标题，例如“首页”“创建房间”。 */
+.page-title {
+  font-size: 42rpx;
+  font-weight: 700;
+  line-height: 1.25;
+  margin: 12rpx 0 20rpx;
+}
+
+/* 卡片或区块里的小标题。 */
+.section-title {
+  font-size: 30rpx;
+  font-weight: 700;
+  margin: 28rpx 0 14rpx;
+}
+
+/* 弱化说明文字，常用于副标题、状态、空数据提示。 */
+.muted {
+  color: $text-secondary;
+  font-size: 24rpx;
+}
+
+/* 横向排列的基础工具类。 */
+.row {
+  display: flex;
+  align-items: center;
+}
+
+/* 两端对齐工具类，左边信息右边按钮/分数时常用。 */
+.between {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* 两列网格，常用于并排按钮。 */
+.grid-2 {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16rpx;
+}
+
+/* 小标签样式，例如房间状态、时间范围。 */
+.tag {
+  display: inline-flex;
+  align-items: center;
+  min-height: 36rpx;
+  padding: 0 14rpx;
+  border-radius: 8rpx;
+  background: $primary-light;
+  color: $primary-color;
+  font-size: 22rpx;
+}
+
+/* 通用输入框样式。 */
+.input {
+  width: 100%;
+  min-height: 88rpx;
+  padding: 0 22rpx;
+  border: 1rpx solid $border-color;
+  border-radius: 8rpx;
+  background: #fff;
+  box-sizing: border-box;
+  font-size: 30rpx;
+}
+
+/* 纵向堆叠工具类，让多个子元素保持统一间距。 */
+.stack {
+  display: flex;
+  flex-direction: column;
+  gap: 16rpx;
+}

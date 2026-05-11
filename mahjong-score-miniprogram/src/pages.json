@@ -1,0 +1,94 @@
+{
+  "pages": [
+    {
+      "path": "pages/splash/index",
+      "style": { "navigationBarTitleText": "麻将计分助手" }
+    },
+    {
+      "path": "pages/auth/bind-phone",
+      "style": { "navigationBarTitleText": "绑定手机号" }
+    },
+    {
+      "path": "pages/home/index",
+      "style": { "navigationBarTitleText": "首页" }
+    },
+    {
+      "path": "pages/room/create",
+      "style": { "navigationBarTitleText": "创建房间" }
+    },
+    {
+      "path": "pages/room/join",
+      "style": { "navigationBarTitleText": "加入房间" }
+    },
+    {
+      "path": "pages/room/select-seat",
+      "style": { "navigationBarTitleText": "选择座位" }
+    },
+    {
+      "path": "pages/room/waiting",
+      "style": { "navigationBarTitleText": "房间等待" }
+    },
+    {
+      "path": "pages/room/play",
+      "style": { "navigationBarTitleText": "房间计分" }
+    },
+    {
+      "path": "pages/room/rank",
+      "style": { "navigationBarTitleText": "房间排行" }
+    },
+    {
+      "path": "pages/round/submit",
+      "style": { "navigationBarTitleText": "本轮提交" }
+    },
+    {
+      "path": "pages/round/history",
+      "style": { "navigationBarTitleText": "历史局" }
+    },
+    {
+      "path": "pages/round/detail",
+      "style": { "navigationBarTitleText": "历史详情" }
+    },
+    {
+      "path": "pages/stats/my",
+      "style": { "navigationBarTitleText": "个人战绩" }
+    },
+    {
+      "path": "pages/stats/room-detail",
+      "style": { "navigationBarTitleText": "房间战绩" }
+    },
+    {
+      "path": "pages/rules/index",
+      "style": { "navigationBarTitleText": "规则说明" }
+    },
+    {
+      "path": "pages/user/profile",
+      "style": { "navigationBarTitleText": "个人资料" }
+    }
+  ],
+  "globalStyle": {
+    "navigationBarTextStyle": "black",
+    "navigationBarTitleText": "麻将计分助手",
+    "navigationBarBackgroundColor": "#ffffff",
+    "backgroundColor": "#f5f7fb"
+  },
+  "tabBar": {
+    "color": "#6b7280",
+    "selectedColor": "#1677ff",
+    "backgroundColor": "#ffffff",
+    "borderStyle": "white",
+    "list": [
+      {
+        "pagePath": "pages/home/index",
+        "text": "首页"
+      },
+      {
+        "pagePath": "pages/stats/my",
+        "text": "战绩"
+      },
+      {
+        "pagePath": "pages/rules/index",
+        "text": "规则"
+      }
+    ]
+  }
+}

@@ -1,0 +1,50 @@
+# 后端应用配置文件：端口、数据库、JSON 时间格式、MyBatis-Plus、接口文档和自定义 app 配置。
+server:
+  # 后端服务端口，前端默认请求 http://localhost:8080。
+  port: 8080
+
+spring:
+  application:
+    # 应用名，主要用于日志和 Spring 生态识别。
+    name: mahjong-score-server
+  datasource:
+    # MySQL 数据源配置，本地开发默认连接 mahjong_score 数据库。
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/mahjong_score?useUnicode=true&characterEncoding=utf8&serverTimezone=Asia/Shanghai
+    username: root
+    password: root
+  jackson:
+    # 统一后端 JSON 时间格式和时区，避免前端看到 UTC 时间。
+    date-format: yyyy-MM-dd HH:mm:ss
+    time-zone: Asia/Shanghai
+
+mybatis-plus:
+  # 如果后续增加 XML Mapper，会从这个路径扫描。
+  mapper-locations: classpath*:mapper/**/*.xml
+  global-config:
+    db-config:
+      # 主键默认自增。
+      id-type: auto
+  configuration:
+    # 数据库下划线字段自动映射 Java 驼峰字段，例如 room_code -> roomCode。
+    map-underscore-to-camel-case: true
+
+springdoc:
+  swagger-ui:
+    # Swagger UI 访问路径。
+    path: /swagger-ui.html
+
+knife4j:
+  # 开启 Knife4j 接口文档增强。
+  enable: true
+
+app:
+  jwt:
+    # 至少 32 字节。生产环境请改成密钥管理系统或环境变量注入。
+    secret: "mahjong-score-miniapp-secret-32bytes"
+    # token 有效期，168 小时等于 7 天。
+    ttl-hours: 168
+  wechat:
+    # 微信小程序 app-id/app-secret。为空时 AuthService 会走本地开发模拟逻辑。
+    app-id: ""
+    app-secret: ""
